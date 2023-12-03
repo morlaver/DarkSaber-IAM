@@ -1,25 +1,25 @@
 
-resource "aws_iam_group" "Directors" {
+resource "aws_iam_group" "Directors" {     #   "IAM Group" + "IAM Group Name"
   
   name = "Directors"
 }
 
-resource "aws_iam_group" "Officers" {
+resource "aws_iam_group" "Officers" {     # "   "
   
   name = "Officers"
 }
 
-resource "aws_iam_group" "Managers" {
+resource "aws_iam_group" "Managers" {    # "   "
   
   name = "Managers"
 }
 
-resource "aws_iam_group" "Associates" {
+resource "aws_iam_group" "Associates" {       # "   "
   
   name = "Associates"
 }
 
-resource "aws_iam_group" "Trainees" {
+resource "aws_iam_group" "Trainees" {   # "   "
   
   name = "Trainees"
 }
