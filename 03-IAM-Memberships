@@ -1,5 +1,5 @@
 ### Defining which member, belongs to which group ###
-resource "aws_iam_user_group_membership" "Directors" {
+resource "aws_iam_user_group_membership" "Directors" {    #  User Director01 belongs to the Directors IAM Group Directors has Directors and Officers as members
   user = aws_iam_user.Director01.name
 
   groups = [
@@ -9,7 +9,7 @@ resource "aws_iam_user_group_membership" "Directors" {
 }
 
 ### Officers are members of Officers and Managers Group ###
-resource "aws_iam_user_group_membership" "Officers" {
+resource "aws_iam_user_group_membership" "Officers" {    #  User Officer01 belongs to the Officers IAM Group Officers has Managers and Officers as members
   user = aws_iam_user.Officer01.name
 
   groups = [
@@ -19,7 +19,7 @@ resource "aws_iam_user_group_membership" "Officers" {
 }
 
 ### Managers are members of Manager and Associates Group ###
-resource "aws_iam_user_group_membership" "Managers" {
+resource "aws_iam_user_group_membership" "Managers" {      #  User Manager01 belongs to the Managers IAM Group Manager has Managers and Associates as members
   user = aws_iam_user.Manager01.name
 
   groups = [
@@ -29,7 +29,7 @@ resource "aws_iam_user_group_membership" "Managers" {
 }
 
 
-resource "aws_iam_user_group_membership" "Associates" {
+resource "aws_iam_user_group_membership" "Associates" {    #  User Associate01 belongs to the Associates IAM Group Associates has Associates and Trainees as members
   user = aws_iam_user.Associate01.name
 
   groups = [
